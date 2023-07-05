@@ -1,0 +1,16 @@
+ko zelis updatat
+
+1.
+git add
+
+2.
+git commit
+
+3.
+git push
+
+preveris z git status
+
+cd - enter a folder
+
+ls - contents of a folder

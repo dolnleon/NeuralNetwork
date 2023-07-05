@@ -1,0 +1,87 @@
+  round a number
+round(n)
+
+round up
+math.ceil(n)
+
+round down
+math.floor(n)
+
+absolute value
+abc(n)
+
+n to the power of m
+pow(n, m)
+
+square root
+math.sqrt(n)
+
+largest value
+max(n, m, ...)
+
+lowest value
+min(n, m, ...)
+
+--- numpy ---
+
+v = np.array([...[]...])
+
+number of dimentions
+v.ndim
+
+dimentions
+v.shape
+
+returns type
+v.dtype
+
+set the type
+v = np.array([], dtype = int32)
+
+number of elements 
+v.size
+
+number of elements in subelement
+v.itemsize
+
+element size
+v.nbytes
+
+returns the row
+v[n, :]
+
+returns the column
+v[:, n]
+
+sum two matrices
+v+m
+
+multiply each element betwen two matrices 
+v*m
+
+take the sinus of the values
+np.sin(v)
+
+matrix multyplication
+np.matmul(v, m)
+
+get the determinant of the matrix
+np.linalg.det(v)
+
+matrix with only zeros
+np.zeros((2, 4, ... dimenzije)) --> np.ones same enke
+
+fill the whole matrix with the same element
+np.full((2, 4), n)
+
+fill the matrix with random numbers
+np.random.rand(2, 4) --> lahko tudi randint
+
+itentity matrix
+bp.indentity(n)
+
+connect two arrays
+m = v
+
+cpoy an array
+m = v.cpoy
