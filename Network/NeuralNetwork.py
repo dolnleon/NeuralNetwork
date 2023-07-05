@@ -16,14 +16,12 @@ class Network():
         for i in range(len(neurons) - 2):
             self.layers.append(LayerDense(neurons[i], neurons[i + 1]))
         self.layers.append(LayerOutput(neurons[len(neurons) - 2], neurons[len(neurons) - 1]))
-        print(self.layers)
+       
 
     def forward(self, inputs):
-        pass
+        self.layers[0].forward(inputs)
+        for i in range (len(self.neurons) - 2):
+            self.layers[i + 1].forward(self.layers[i].outputs)
 
     def backward(self):
         pass            
-
-net = Network([2, 6, 5, 3])
-
-inputs = np.array([6, 3])

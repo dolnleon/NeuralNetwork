@@ -3,8 +3,12 @@ import math
 import numpy as np
 
 #internal libraries
-from Layers import LayerDense
+from NeuralNetwork import Network
 
-m = np.full((3, 3), 5)
+net = Network([2, 6, 5, 3])
 
-print(m)
+inputs = np.array([6, 3])
+
+net.forward(inputs)
+
+print(net.)

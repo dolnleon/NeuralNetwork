@@ -13,6 +13,8 @@ class Layer:
         self.weights = np.random.rand(n_neurons, n_inputs)
         #A matrix that stores the biases of a single layer -> dim 1
         self.biases = np.random.rand(n_neurons)
+        #A matrix with the values of neurons in this layer -> dim 1
+        self.outputs = np.zeros(n_neurons)
 
 #This subclass represents one dense layer in a nerual network.
 class LayerDense(Layer):
@@ -27,7 +29,8 @@ class LayerDense(Layer):
 #This subclass represents the last layer in a nerual network.
 class LayerOutput(Layer):
     def forward(self, inputs):
-        return(softmax(np.matmul(self.weights, inputs) + self.biases))
-    
+        #A matrix with the values of neurons in this layer -> dim 1
+        self.outputs = softmax(np.matmul(self.weights, inputs) + self.biases)
+
     def backward(self):
         pass
