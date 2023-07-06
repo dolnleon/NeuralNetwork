@@ -7,6 +7,8 @@ from Activation import ReLU
 from Layers import Layer
 from Layers import LayerDense
 from Layers import LayerOutput
+from Cost import cost
+from Cost import dCost
 
 class Network():
     def __init__(self, neurons):
@@ -22,9 +24,13 @@ class Network():
         self.layers[0].forward(inputs)
         for i in range (len(self.neurons) - 2):
             self.layers[i + 1].forward(self.layers[i].outputs)
+        return(self.layers[len(self.layers) - 1].outputs)
 
     def backward(self):
         pass      
+
+    def cost(self, goal):
+        return(cost(self.layers[len(self.layers) - 1].outputs, goal))
 
     #Functions for debuging.
     #Will be removed in the final version.    

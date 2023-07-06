@@ -1,6 +1,6 @@
 #external Libraries
 import math
-import numpy as np
+import numpy as np 
 
 #internal libraries
 from NeuralNetwork import Network
@@ -11,4 +11,4 @@ inputs = np.array([6, 3])
 
 net.forward(inputs)
 
-net.Values()
+print(net.cost(1))
