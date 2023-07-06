@@ -11,4 +11,4 @@ inputs = np.array([6, 3])
 
 net.forward(inputs)
 
-print(net.)
+net.Values()

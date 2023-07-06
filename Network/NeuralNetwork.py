@@ -24,4 +24,12 @@ class Network():
             self.layers[i + 1].forward(self.layers[i].outputs)
 
     def backward(self):
-        pass            
+        pass      
+
+    #Functions for debuging.
+    #Will be removed in the final version.    
+
+    #This function prints the values of the neurons in the network, withous the input neurons.
+    def Values(self):
+        for i in self.layers:
+            print(i.outputs)  
